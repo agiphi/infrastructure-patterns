@@ -1,0 +1,6 @@
+services:
+  reference-service:
+    build: .
+    environment:
+      APP_ENV: development
+      SERVICE_NAME: infrastructure-patterns
