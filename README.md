@@ -24,3 +24,14 @@ This repository is independent technical evidence. It contains no proprietary pr
 ## Run
 
 `python -m pytest -q`
+
+## Architecture
+
+```mermaid
+flowchart LR
+  A[Environment] --> B[Configuration]
+  B --> C[Application]
+  C --> D[Health / Readiness]
+  C --> E[Structured Events]
+  C --> F[Container]
+```
