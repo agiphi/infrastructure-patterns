@@ -1,36 +1,26 @@
 # Infrastructure Patterns
 
-Practical, dependency-light infrastructure patterns for production-oriented systems.
+**Public Reference Implementation — No Proprietary IP**
 
-This repository is a collection of small reference components rather than a framework.
+A local-first reference implementation of practical infrastructure patterns for production-oriented Python services.
 
-## Patterns
+## Architecture
 
-- configuration management
-- structured health checks
+`Configuration → Application Boundary → Health/Readiness → Structured Events → Container`
+
+## Demonstrated patterns
+
+- environment-driven configuration
+- health and readiness contracts
+- structured operational events
 - container boundaries
-- operational logging
-- graceful failure
-- service readiness
-- environment separation
+- local execution with no external service dependency
+- testable operational behavior
 
-## Repository structure
+## Scope
 
-```
-src/
-  app.py
-Dockerfile
-docker-compose.yml
-```
+This repository is independent technical evidence. It contains no proprietary production configuration, credentials, private deployment details, or cloud dependency. It is intentionally small enough to run locally and in CI.
 
-## Run locally
+## Run
 
-```bash
-python -m src.app
-```
-
-## Principle
-
-Infrastructure should be understandable, observable, controllable, and operable.
-
-These examples are independent reference implementations and contain no proprietary production configuration.
+`python -m pytest -q`
